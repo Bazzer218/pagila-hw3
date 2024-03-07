@@ -6,3 +6,16 @@
  * That is, list all actors that have appeared in a film with 'RUSSELL BACALL'.
  * Do not list 'RUSSELL BACALL', since he has a Bacall Number of 0.
  */
+select distinct(first_name ||' '|| last_name) as "Actor Name"
+from actor a1
+join film_actor fa1 on a1.actor_id = fa1.actor_id
+join film f1 on fa1.film_id = f1.film_id
+where 
+(a1.first_name ||' '|| a1.last_name) != 'RUSSELL BACALL' and
+f1.title in (
+select title from film
+join film_actor using(film_id)
+join actor using(actor_id)
+where first_name = 'RUSSELL' and last_name = 'BACALL')
+order by "Actor Name"
+;
