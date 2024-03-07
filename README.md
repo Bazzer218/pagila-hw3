@@ -1,7 +1,7 @@
 # pagila-hw3
 [![](https://github.com/mikeizbicki/pagila-hw3/workflows/tests/badge.svg)](https://github.com/mikeizbicki/pagila-hw3/actions?query=workflow%3Atests)
 
-## Tasks
+## Task
 
 1. Fork this repo and clone it on to the lambda server like normal.
     Ensure that you properly get the `pagila` submodule data.
